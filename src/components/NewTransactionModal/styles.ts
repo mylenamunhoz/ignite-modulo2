@@ -67,9 +67,10 @@ const colors = {
 }
 
 export const RadioBox = styled.button<RadioBoxProps>`
-   button {
     height: 4rem;
     border: 1px solid #d7d7d7;
+    border-radius: 0.25rem;
+    /* width: 2rem 2rem; */
 
     background: ${(props) => props.isActive 
       ? transparentize(0.9, colors[props.activeColor])
@@ -97,5 +98,4 @@ export const RadioBox = styled.button<RadioBoxProps>`
       font-size: 1rem;
       color: var(--text-title);
     }
-  }
 `;
