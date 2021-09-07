@@ -2,14 +2,11 @@ import { Container } from "./styles";
 import incomeImg from '../../assets/icons/income.svg'
 import outcomeImg from '../../assets/icons/outcome.svg'
 import totalImg from '../../assets/icons/total.svg'
-import { useEffect } from "react";
-import { api } from "../../services/api";
+import { useContext } from "react";
+import { TransactionsContext } from "../../TransactionsContext";
 
 export function Summary() {
-  useEffect(() => {
-    api.get('transactions')
-    .then(response => console.log(response.data))
-  }, []);
+  const transactions = useContext(TransactionsContext);
 
   return (
    <Container>
